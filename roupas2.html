@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela de compra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="tela.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+
+
+    <style>
+        .foto
+        {
+            width: 400px;
+            height: 500px;
+            margin-top: 2%;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="springshop">
+            <div class="texto2">SPRING SHOP</div>
+        </div>
+       
+        <div class="pesquisa">
+            <img src="image_preview-PhotoRoom.png-PhotoRoom.png" width="20px">
+            <input type="text" class="caixa">
+            x
+     </div>
+        <div class="icones">
+          <img src="favoritos.png" class="favoritos">
+          <img src="compras.png" class="compras">
+            <a href= "file:///C:/Users/camila_f_reinert/Desktop/site/site/login.html" a>
+                <img src="login.png" class="login">
+            </a>
+       
+        </div>
+
+
+        <div class="navigation">
+            <div class="toggle"><span></span></div>
+            <ul>
+                <li style="--i:1;"><a href="telainicial.html">Inicio</a></li>
+                <li style="--i:2;"><a href="#">Sobre</a></li>
+                <li style="--i:3;"><a href="#">Carrinho</a></li>
+                <li style="--i:4;"><a href="#">Favoritos</a></li>
+                <li style="--i:5;"><a href="cadastro.html">Cadastre-se</a></li>
+                <li style="--i:5;"><a href="#">Produtos</a></li>
+   
+            </ul>
+           
+        </div>
+        <script>
+            let navigation = document.querySelector('.navigation');
+            document.querySelector('.toggle').onclick = function()
+            {
+                this.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+
+
+    </div>
+    <div class="linha_cabecalho"></div>
+
+
+    <div class="foto">
+        <img src="1.png" width="900px">
+    </div>
+</body>
+</html>
