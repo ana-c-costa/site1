@@ -16,13 +16,16 @@
         body
         {
             background-image: url(Fundo.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
             width: 100%; /*largura*/
             height: 100vh;
             margin: 0px;
             display: flex;
             flex-direction: column;
             align-content: center;
-            align-items: center;      
+            align-items: center;  
+            overflow: hidden;    
         }
         .cabecalho
         {
@@ -42,7 +45,8 @@
             font-size: 40px; /*tamanho da letra*/
             font-family: 'Gabriela', serif;
             padding-left: 25px;
-            margin-top: 20px;        
+            margin-top: 20px;     
+            color: white;
         }
         .texto2
          {
@@ -51,7 +55,7 @@
             font-size: 40px; /*tamanho da letra*/
             margin-top: 30px;
             font-family: 'Gabriela', serif;
-
+            color: white;
 
          }
          .email
@@ -75,7 +79,7 @@
         {
             width: 25%; /*largura*/
             height: 600px; /*altura*/
-            margin-top: 80px;
+            margin-top: 40px;
             margin-bottom: 50px;
             display: flex; /*mostrar*/
             align-items: center;
@@ -84,6 +88,7 @@
             border-style: solid;
             border-width: 4px;
             border-color: black;
+            font-size: 30px;
         }
         .foto
         {
@@ -91,18 +96,7 @@
             margin-top: 30px;
         }
 
-
-        .BT1
-        {
-            background-image: linear-gradient(to rigth, #FFDE59, #FF914D);
-            width: 170px; /* largura*/
-            height: 50px; /* altura*/
-            margin-top: 130px;
-            font-size: 20px; /* tamanho da letra*/
-            cursor: pointer;
-            font-family: 'Gabriela', serif;
-        }
-        .BT2
+        .BT
         {
             background-image: linear-gradient(to right, #FFDE59, #FF914D);
             width: 170px; /* largura*/
@@ -145,8 +139,8 @@
     <div class="cabecalho">
         <div class="texto">SPRING SHOP</div>
             <div class="texto2">Bem vindos!</div>
-   
-    </div>
+       </div>
+
     <div class="meio" >  
         <div class="email">
         Digite seu e-mail  <br> <input type="text"><br>
@@ -157,10 +151,10 @@
 
 
                 <a href="file:///C:/Users/camila_f_reinert/Desktop/site/site/telainicial.html">
-                    <button class="BT1">ENTRAR</button>
+                    <button class="BT">ENTRAR</button>
                  </a>
                 <a href="file:///C:/Users/camila_f_reinert/Desktop/site/site/cadastro.html">
-                    <button class="BT2">CADASTRE-SE</button>
+                    <button class="BT">CADASTRE-SE</button>
                 </a>
 
 
@@ -176,6 +170,7 @@
             </a>
           </div>
        
+        </div>
     </div>
 
 
