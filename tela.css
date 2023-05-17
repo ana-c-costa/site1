@@ -6,8 +6,6 @@
             flex-direction: column;
             justify-content: center;
             justify-items: center;
-
-
         }
         .cabecalho
         {
@@ -93,8 +91,6 @@
         }
         .dVendidos
         {
-
-
             width: 100%;
             height: 100px;
             display: flex;
@@ -118,11 +114,12 @@
         }
         .MaisVendidos
         {
-            width: 300px;
+            width: 230px;
             height: 40px;
             font-size: 30px;
             font-family: 'Gabriela', serif;
             margin-top: 40px;
+            margin-left: 20px;
         }
         .BT1
         {
@@ -144,9 +141,21 @@
         }
         .promocao
         {
-            background-image: linear-gradient(to right, black, red);
+            background-color: pink;
             width: 100%;
             height: 300px;
             margin-top: 20px;
         }
-
+        .droupa
+        {
+            background-color: red;
+            width: 90%;
+            height: 300px;
+            margin-left: ;
+        }
+       .roupa_promocao
+       {
+        width: 350px;
+        height: 500px;
+        margin-top: -120px;
+       }
