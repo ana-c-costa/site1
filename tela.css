@@ -103,14 +103,14 @@
             background-color: black;
             width: 40%;
             height: 4px;
-            margin-top: 50px;
+            margin-top: 280px;
         }
         .linha_MaisVendidosE
         {
             background-color: black;
             width: 40%;
             height: 4px;
-            margin-top: 50px;
+            margin-top: 280px;
         }
         .MaisVendidos
         {
@@ -118,7 +118,7 @@
             height: 40px;
             font-size: 30px;
             font-family: 'Gabriela', serif;
-            margin-top: 40px;
+            margin-top: 260px;
             margin-left: 20px;
         }
         .BT1
@@ -139,10 +139,17 @@
            margin-left: 95%;
            position: fixed;
         }
-        .promocao
+        *
         {
-            background-color: pink;
-            width: 100%;
-            height: 800px;
-            margin-top: 20px;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        .container
+        {
+            position: relative;
+            padding: 15px;
+            max-width: 640px;
+            margin: 0 auto;
+
         }

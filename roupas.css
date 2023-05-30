@@ -11,10 +11,15 @@ body
     flex-direction: row;
     justify-content: space-around;
     justify-items: center;
-    margin-top: 70px;
+    margin-top: 300px;
   }
    
 .roupa
+  {
+    width: 200px;
+    height: 300px;
+  }
+.item current-item
   {
     width: 200px;
     height: 300px;
