@@ -4,175 +4,187 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login </title>
+    <title>login</title>
+   
+<style>
+    body
+    {
+        background-image: url(fundo.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%; /*largura*/
+        height: 100vh;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;  
+        overflow: hidden;
+    }
+    .form 
+    {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 440px;
+        background-image: linear-gradient(45deg, #cf1717, 
+        #d8a31d);
+        padding: 40px;
+        border-radius: 50px;
+        position: relative;
+        margin-top: 160px;
+    }
 
+    .titulo
+    {
+        font-size: 28px;
+        color: #000000;
+        font-weight: 600;
+        letter-spacing: -1px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    .title::before,.title::after 
+    {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        left: 0px;
+        background-color: #000000;
+    }
 
+    .title::before 
+    {
+        width: 18px;
+        height: 18px;
+        background-color: #000000;
+    }
 
-    <style>
-        body
-        {
-            background-image: url(Fundo.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            width: 100%; /*largura*/
-            height: 100vh;
-            margin: 0px;
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            align-items: center;  
-            overflow: hidden;    
-        }
-        .cabecalho
-        {
-            background-image: linear-gradient(to rigth, #FF3131, #FF914D);
-            width: 100%; /*largura*/
-            height: 110px; /*altura*/
-            font-size: 40px; /*tamanho da letra*/
-            font-family: 'Gabriela', serif;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .texto
-        {
-            width: 500px; /*largura*/
-            height: 80hv; /*altura*/
-            font-size: 40px; /*tamanho da letra*/
-            font-family: 'Gabriela', serif;
-            padding-left: 25px;
-            margin-top: 20px;     
-            color: white;
-        }
-        .texto2
-         {
-            width: 300px; /*largura*/
-            height: 80px; /*altura*/
-            font-size: 40px; /*tamanho da letra*/
-            margin-top: 30px;
-            font-family: 'Gabriela', serif;
-            color: white;
+    .title::after
+    {
+        width: 18px;
+        height: 18px;
+        animation: pulse 1s linear infinite;
+    }
 
-         }
-         .email
-         {
-            width: 280px; /*largura*/
-            height: 100px; /*altura*/
-            font-size: 15px; /*tamanho da letra*/
-            margin-left: 100px;
-            margin-top: 100px;
-            font-family: 'Gabriela', serif;
-         }
-         .senha
-         {
-            width: 280px; /*largura*/
-            height: 100px; /*altura*/
-            margin-left: 100px;
-            font-size: 9px; /*tamanho da letra*/
-            font-family: 'Gabriela', serif;
-         }
-        .meio
-        {
-            width: 25%; /*largura*/
-            height: 600px; /*altura*/
-            margin-top: 40px;
-            margin-bottom: 50px;
-            display: flex; /*mostrar*/
-            align-items: center;
-            align-content: center; /*alinhar-conteúdo:*/
-            flex-direction: column;
-            border-style: solid;
-            border-width: 4px;
-            border-color: black;
-            font-size: 30px;
-        }
-        .foto
-        {
-            width: 90px;
-            margin-top: 30px;
-        }
+    .message, .signin 
+    {
+        color: rgba(0, 0, 0, 0.822);
+        font-size: 14px;
+    }
 
-        .BT
-        {
-            background-image: linear-gradient(to right, #FFDE59, #FF914D);
-            width: 170px; /* largura*/
-            height: 50px; /* altura*/
-            margin-top: 60px;
-            font-size: 20px; /* tamanho da letra*/
-            cursor: pointer;
-            font-family: 'Gabriela', serif;
-        }
-        .conteudo
-        {
-            width: 200px; /* largura*/
-            height: 100vh; /* altura*/
-            display: flex;
-            margin-top: 20px;
-            justify-content: space-around;
-            justify-items: center;
-        }
-        .botao
-        {
-            cursor: pointer;
-            width: 50px;
-            height: 50px;
-            border-radius:10px;
-            display: flex;
-            justify-content: center;
-            justify-items: center;
-            align-items: center;
-            align-content: center;
-        }
+    .signin {
+        text-align: center;
+    }
 
+    .signin a {
+        color: rgb(0, 0, 0);
+    }
 
+    .signin a:hover {
+        text-decoration: underline #0a0a0a;
+    }
 
+    .flex {
+        display: flex;
+        width: 100%;
+        gap: 6px;
+    }
 
-    </style>
+    .form label
+    {
+        position: relative;
+    }
 
+    .form label .input 
+    {
+        width: 430px;
+        padding: 10px 10px 20px 10px;
+        outline: 0;
+        border: 1px solid rgba(0, 0, 0, 0.397);
+        border-radius: 10px;
+    }
 
+    .form label .input + span {
+        position: absolute;
+        left: 10px;
+        top: 25px;
+        color: rgb(0, 0, 0);
+        font-size: 0.7em;
+        cursor: text;
+        transition: 0.3s ease;
+    }
+
+    .form label .input:placeholder-shown + span 
+    {
+        top: 30px;
+        font-size: 0.7em;
+        font-weight: 600;
+    }
+
+    .form label .input:focus + span,.form label .input:valid + span {
+        top: 27px;
+        font-size: 0.7em;
+        font-weight:500;
+    }
+
+    .form label .input:valid + span {
+        color: green;
+    }
+
+    .submit {
+        margin-top: 75px;
+        border: none;
+        outline: none;
+        background-color: #ffb700;
+        padding: 10px;
+        border-radius: 10px;
+        color: #000000;
+        font-size: 16px;
+        transform: .3s ease;
+    
+    }
+
+    .submit:hover {
+        background-image: linear-gradient(45deg, #dd933e, #dd2626);
+    }
+
+    @keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+    }
+
+</style>
 </head>
+
+
 <body>
-    <div class="cabecalho">
-        <div class="texto">SPRING SHOP</div>
-            <div class="texto2">Bem vindos!</div>
-       </div>
-
-    <div class="meio" >  
-        <div class="email">
-        Digite seu e-mail  <br> <input type="text"><br>
-        <br>
-        Digite sua senha   <br> <input type="text"><br>
-        <div class="senha"><B> ESQUECI MINHA SENHA </B></div>
-        </div>
-
-
-                <a href="file:///C:/Users/camila_f_reinert/Desktop/site/site/telainicial.html">
-                    <button class="BT">ENTRAR</button>
-                 </a>
-                <a href="file:///C:/Users/camila_f_reinert/Desktop/site/site/cadastro.html">
-                    <button class="BT">CADASTRE-SE</button>
-                </a>
-
-
-        <div class="conteudo">
-            <div class="botao">
-            <a href="https://pt-br.facebook.com/"target="_blank">
-                <img src="facebook.png" width="50px">
-            </a>
-            </div>
-          <div class="botao">
-            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"target="_blank">
-                <img src="google.png" width="50px" >
-            </a>
-          </div>
+        <form action="crud.php" method="post" class="form">
+            <p class="titulo">Login</p>
+          <label>
+            <input class="input" type="text" placeholder="email" name="email">
+            </label> 
+                
+            <label>
+                <input class="input" type="text" placeholder="senha" name="senha">
+            </label>
+            <button class="submit">Entrar</button>
+        </form>
+        
        
-        </div>
-    </div>
-
-
+  
 </body>
-</html>

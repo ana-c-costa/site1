@@ -139,17 +139,3 @@
            margin-left: 95%;
            position: fixed;
         }
-        *
-        {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        .container
-        {
-            position: relative;
-            padding: 15px;
-            max-width: 640px;
-            margin: 0 auto;
-
-        }

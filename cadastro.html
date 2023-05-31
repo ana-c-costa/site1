@@ -6,129 +6,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastro</title>
    
-        <style>
-        body
-        {
-            background-image: url(Fundo.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            margin: 0%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            justify-items: center;
-            overflow: hidden;
-        }
-        .cabecalho
-        {
-            width: 100%;
-            height: 10vh;
-            display: flex;
-            flex-direction: row;
-        }
-        .texto
-        {
-            width: 90%;
-            height: 200px;
-            resize: none;
-            color: white;
-        }
-        .botao
-        {
-            width: 100%;
-            height: 30vh;
-        }
-        .BT1
-        {
-            cursor: pointer;
-            background-image: linear-gradient(#FFDE59, #FF914D);
-            width: 100px;
-            height: 40px;
-            font-family: 'Gabriela', serif;
-            margin-left: 42%;
-        }
-        .BT2
-        {
-            cursor: pointer;
-            background-image: linear-gradient(#FFDE59, #FF914D);
-            width: 100px;
-            height: 40px;
-            font-family: 'Gabriela', serif;
-            margin-left: 1%;
-        }
-        .texto
-        {
-            width: 40%;
-            height: 10vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+<style>
+    body
+    {
+        background-image: url(Fundo.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%; /*largura*/
+        height: 100vh;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;  
+        overflow: hidden;
+    }
+    .form
+    {
+        width: 100%;
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 450px;
+        background-image: linear-gradient(45deg, #cf1717,
+        #d8a31d);
+        padding: 40px;
+        border-radius: 50px;
+        position: relative;
+        margin-top: 100px;
+    }
 
 
-        }
-        .texto2
-        {
-            font-family: 'Gabriela', serif;
-            font-size: 40px;
-            margin: 4%;
-        }
-        fieldset
-        {
-            border-style: none;
-            margin-left: 35%;
-            margin-top: 50px;
-            font-size: 20px;
-            color: white;
-        }
-        input
-        {
-            background:rgba(0, 0, 0, 0.3);
-            height: 20px;
-        }
+    .title
+    {
+        font-size: 28px;
+        color: #000000;
+        font-weight: 600;
+        letter-spacing: -1px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
 
-    </style>
+
+    .title::before,.title::after
+    {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        left: 0px;
+        background-color: #000000;
+    }
+
+
+    .title::before
+    {
+        width: 18px;
+        height: 18px;
+        background-color: #000000;
+    }
+
+
+    .title::after
+    {
+        width: 18px;
+        height: 18px;
+        animation: pulse 1s linear infinite;
+    }
+
+
+    .message, .signin
+    {
+        color: rgba(0, 0, 0, 0.822);
+        font-size: 14px;
+    }
+
+
+    .signin {
+        text-align: center;
+    }
+
+
+    .signin a {
+        color: rgb(0, 0, 0);
+    }
+
+
+    .signin a:hover {
+        text-decoration: underline #0a0a0a;
+    }
+
+
+    .flex {
+        display: flex;
+        width: 100%;
+        gap: 6px;
+    }
+
+
+    .form label
+    {
+        position: relative;
+    }
+
+
+    .form label .input
+    {
+        width: 430px;
+        padding: 10px 10px 20px 10px;
+        outline: 0;
+        border: 1px solid rgba(0, 0, 0, 0.397);
+        border-radius: 10px;
+    }
+
+
+    .form label .input + span {
+        position: absolute;
+        left: 10px;
+        top: 25px;
+        color: rgb(0, 0, 0);
+        font-size: 0.7em;
+        cursor: text;
+        transition: 0.3s ease;
+    }
+
+
+    .form label .input:placeholder-shown + span
+    {
+        top: 30px;
+        font-size: 0.7em;
+        font-weight: 600;
+    }
+
+
+    .form label .input:focus + span,.form label .input:valid + span {
+        top: 27px;
+        font-size: 0.7em;
+        font-weight:500;
+    }
+
+
+    .form label .input:valid + span {
+        color: green;
+    }
+
+
+    .submit {
+        margin-top: 40px;
+        border: none;
+        outline: none;
+        background-color: #ffb700;
+        padding: 10px;
+        border-radius: 10px;
+        color: #000000;
+        font-size: 16px;
+        transform: .3s ease;
+   
+    }
+
+
+    .submit:hover {
+        background-image: linear-gradient(45deg, #dd933e, #dd2626);
+    }
+
+
+    @keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+    }
+
+
+</style>
 </head>
 
 
+
+
 <body>
-        <div class="cabecalho">
-            <div class="texto">
-                <div class="texto2">CADASTRE-SE</div>
-            </div>
-        </div>
-    <fieldset>
-        Nome: <br>
-        <input size= "60" type="text" class=”caixa_larga”>
+        <form class="form">
+            <p class="title">Cadastre-se </p>
+            <p class="message">Cadastre-se agora e tenha acesso total ao nosso aplicativo.</p>
+                <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Nome</span>
+                </label>
        
-        <br>  <br>
-        Endereço: <br>
-        <input size= "60" type="text" class=”caixa_larga”>
-        <br>  <br>
-        Celular: <br>
-        <input size= "60" type="text" class=”caixa_larga”>
-        <br>  <br>
-        CPF: <br>
-        <input size= "60" type="text" class=”caixa_larga”>
-        <br>  <br>
-        Data de Nascimento: <br>
-        <input type="date">
-        <br>  <br>
-        E-Mail: <br>
-        <input size= "60" type="text" class=”caixa_larga”>
-        <br>  <br>
-        Senha: <br>
-        <input size= "60" type="text" class=”caixa_larga”>
-        <br>  <br>
-        Confirme a Senha: <br>
-        <input size= "60" type="text" class=”caixa_larga”>
-    </fieldset>
+            </div>  
+                   
+            <label>
+                <input required="" placeholder="" type="email" class="input">
+                <span>Email</span>
+            </label>
+               
+            <label>
+                <input required="" placeholder="" type="password" class="input">
+                <span>Senha</span>
+            </label>
+            <label>
+                <input required="" placeholder="" type="password" class="input">
+                <span>Confirme sua senha</span>
+            </label>
+            <button class="submit">Entrar</button>
+            <p class="signin">Já tem uma conta?<a href="#">Entre</a> </p>
+        </form>
 
 
-    <div class="botao">
-    <button class="BT1"> CADASTRAR  </button>
-    <button class="BT2"> CANCELAR </button>
-
-
-    </div>
-
+ 
 </body>
