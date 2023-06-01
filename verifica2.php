@@ -1,9 +1,11 @@
 <?php 
-    include("conecta.php");
-    include("crud.php");
+    include("conecta2.php");
+    include("crud2.php");
 
+    $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
+    $conf_senha = $_POST["conf_senha"]
 
 
     $n = 0;
@@ -21,6 +23,6 @@
     {  
         else
         {
-            header("Location: login.html");
+            header("Location: cadastro.html");
         }
     }

@@ -195,31 +195,33 @@
 
 
 <body>
-        <form class="form">
+    
+        <form action="crud2.php" method="post" class="form">
             <p class="title">Cadastre-se </p>
             <p class="message">Cadastre-se agora e tenha acesso total ao nosso aplicativo.</p>
                 <div class="flex">
+                    
                 <label>
-                    <input required="" placeholder="" type="text" class="input">
+                    <input class="input" type="text" placeholder="nome" name="nome">
                     <span>Nome</span>
                 </label>
        
             </div>  
                    
             <label>
-                <input required="" placeholder="" type="email" class="input">
+                <input class="input" type="text" placeholder="email" name="email">
                 <span>Email</span>
             </label>
                
             <label>
-                <input required="" placeholder="" type="password" class="input">
+                <input class="input" type="text" placeholder="senha" name="senha">
                 <span>Senha</span>
             </label>
             <label>
-                <input required="" placeholder="" type="password" class="input">
+                <input class="input" type="text" placeholder="conf_senha" name="conf_senha">
                 <span>Confirme sua senha</span>
             </label>
-            <button class="submit">Entrar</button>
+            <button type="submit" class="submit">Entrar</button>
             <p class="signin">Já tem uma conta?<a href="#">Entre</a> </p>
         </form>
 

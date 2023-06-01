@@ -5,8 +5,6 @@ $email = $_POST["email"];
 $senha = $_POST["senha"];
 
 
-
-
 $comando = $pdo->prepare("INSERT INTO login VALUES ('$email', '$senha')");
 $resultado = $comando->execute();
 /*para voltar no formulario*/ 
