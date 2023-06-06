@@ -20,7 +20,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: #095364;
+    color: #000000;
     font-family: 'Gabriela', serif;
     font-size: 25px;
 }
@@ -47,7 +47,7 @@
     left: 0;
     width:100% ;
     height: 2px;
-    background:#095364;
+    background:#000000;
     transition: 0.5s;
 }
 .toggle span::after
@@ -58,7 +58,7 @@
     left: 0;
     width:100% ;
     height: 2px;
-    background:#095364;
+    background:#000000;
     transition: 0.5s;
 }
 .toggle.active span::before
@@ -103,14 +103,14 @@ ul li a
     display: block;
     padding: 10px 20px;
     height: 50px;
-    background: #fff;
-    color: #095364;
+    background: #0f0f0f;
+    color: #d87513;
     transition: 0.5s;
     font-family: 'Gabriela', serif;
 }
 ul li a:hover
 {
-    background: #f6f6f6;
-    color: #87C6D4;
+    background: #0f0f0f;
+    color: #deb471;
     transition: 0s;
 }
